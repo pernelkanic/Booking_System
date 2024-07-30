@@ -14,7 +14,7 @@ func registerRoutes() http.Handler {
 	r.Route("/apo", func(r chi.Router) {
 		r.Get("/", getAllbooking)             //GET /contacts
 		r.Get("/{bookingId}", getBookingbyId) //GET /contacts/0147344454
-		r.Post("/", postBooking)              //POST /contacts
+		r.Post("/", postooking)              //POST /contacts
 
 	})
 	return r
