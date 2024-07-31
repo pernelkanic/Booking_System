@@ -35,7 +35,9 @@ export const getTrains = async(req : Request, res : Response) =>{
 }
 export const getTrainById = async(req:Request , res:Response) =>{
     try{
-        const {train_id} = req.params;
+        const train_id = req.params.id;
+        console.log(train_id);
+        
         const train_details = await train.findById(train_id);
         if(!train_details){
             res.status(400).json({
